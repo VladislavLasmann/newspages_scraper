@@ -5,16 +5,17 @@ The data there will be preprocessed by extracting only the human readable text a
 
 Since crawling the whole archive of the websites could produce a lot of data, a database is necessary to mange it.
 **This project needs a MongoDB database.**
-To get started fast, you can use a dockerized mongodb container. - Don't forget the set environment variables for authentication.
+To get started fast, you can use a [dockerized mongodb container](https://hub.docker.com/_/mongo?tab=description). - Don't forget the set environment variables for authentication.
 
-###### Currently available newspaper websites:
-| Newspaper      | Website      |
-|----------------|--------------|
-|Spiegel         | Spiegel.de   |
-|Welt            | Welt.de      |
-|Sueddeutsche    | Sueddeutsche |
+##### Currently available newspaper websites:
+| Newspaper      | Website                                                      |
+|----------------|--------------------------------------------------------------|
+|Spiegel         | [http://www.spiegel.de/](http://www.spiegel.de/)             |
+|Sueddeutsche    | [https://www.sueddeutsche.de/](https://www.sueddeutsche.de/) |
+|Welt            | [https://www.welt.de/](https://www.welt.de/)                 |
 
-###### Data format
+
+##### Data format
 The data format of each article is like shown below:
 ```
 {
