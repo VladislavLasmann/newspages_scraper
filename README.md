@@ -25,7 +25,7 @@ The data format of each article is like shown below:
     "categories": List of String,
     "main_category": String,
     "authors": List of String,
-    "publish_time": ISODate,
+    "publish_time": datetime.date,
     "title": String,
     "text_header": " String,
     "text_body": String
