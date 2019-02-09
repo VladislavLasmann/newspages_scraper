@@ -8,7 +8,7 @@ from scraper.items import Article
 
 
 class SpiegeldeSpider(scrapy.Spider):
-    name = 'spiegelDE'
+    name = 'SPIEGEL'
     base_url = 'http://www.spiegel.de'
     archive_start_date = date(2000, 1, 1)
     start_urls = []

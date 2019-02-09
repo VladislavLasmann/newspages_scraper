@@ -25,7 +25,7 @@ class Client:
     def get_all_articles_in_interval_pages_section(self, listof_newspages: List[Newspage], listof_section: List[str],
                                                    min_date: datetime, max_date: datetime):
         result_list = []
-        query_dict = {"publish_time": {"gte": min_date, "lte": max_date}}
+        query_dict = {"publish_time": {"$gte": min_date, "$lte": max_date}}
 
         for newspage in listof_newspages:
             for section in listof_section:
@@ -38,7 +38,7 @@ class Client:
 
     def get_all_articles_in_interval(self, listof_newspages: List[Newspage], min_date: datetime, max_date: datetime):
         result_list = []
-        query_dict = {"publish_time": {"gte": min_date, "lte": max_date}}
+        query_dict = {"publish_time": {"$gte": min_date, "$lte": max_date}}
 
         for newspage in listof_newspages:
             database = self.mongo_connection[newspage.name]

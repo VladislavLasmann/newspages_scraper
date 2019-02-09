@@ -8,7 +8,7 @@ from scraper.items import Article
 
 
 class WeltdeSpider(scrapy.Spider):
-    name = 'weltDE'
+    name = 'WELT'
     archive_start_date = date(1995, 1, 1)
     start_urls = []
     custom_settings = {

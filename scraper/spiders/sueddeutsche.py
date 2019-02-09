@@ -8,7 +8,7 @@ from scraper.items import Article
 
 
 class SueddeutscheSpider(scrapy.Spider):
-    name = 'sueddeutsche'
+    name = 'SUEDDEUTSCHE'
     archive_start_year = 2001
     start_urls = ['https://www.sueddeutsche.de/archiv']
     custom_settings = {
