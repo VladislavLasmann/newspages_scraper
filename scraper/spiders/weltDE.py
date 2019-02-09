@@ -64,7 +64,7 @@ class WeltdeSpider(scrapy.Spider):
 
     def _get_start_urls(self):
         days_delta = (date.today() - self.archive_start_date).days
-        dates_inbetween = [date.today() + timedelta(add_dates) for add_dates in range(days_delta + 1)]
+        dates_inbetween = [self.archive_start_date + timedelta(add_dates) for add_dates in range(days_delta + 1)]
         return ['https://www.welt.de/schlagzeilen/nachrichten-vom-'
                 + day.strftime("%d-%m-%Y") + '.html'
                 for day in dates_inbetween]
