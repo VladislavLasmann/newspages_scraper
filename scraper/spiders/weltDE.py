@@ -33,7 +33,7 @@ class WeltdeSpider(scrapy.Spider):
     def scrape_article(self, response):
         if not self._contains_payment_wall(response):
             article = Article()
-            article["newspaper_name"] = "Welt"
+            article["newspaper_name"] = self.name
             article["url"] = response.url
             article["categories"] = response.css('li[data-qa="Breadcrumb.Item"] > *[property=name] ::text, li[data-qa="Breadcrumb.Item"] > a > *[property=name] ::text').extract()
             article["main_category"] = article["categories"][1]

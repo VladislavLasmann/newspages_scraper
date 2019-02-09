@@ -67,7 +67,7 @@ class SueddeutscheSpider(scrapy.Spider):
     def scrape_article(self, response):
         if not self._contains_payment_wall(response):
             article = Article()
-            article["newspaper_name"] = "Sueddeutsche"
+            article["newspaper_name"] = self.name
             article["url"] = response.url
             article["categories"] = response.css('li.breadcrumbs__item > a ::text, span[itemprop=title]::text, li[itemprop] > *::text').extract()
             article["main_category"] = article["categories"][1]
