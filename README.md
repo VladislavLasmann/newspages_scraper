@@ -1,6 +1,6 @@
 # newspages_scraper
 
-This projects crawls the whole archive of the implemented newspaper websites.
+This software is written for Python3 and crawls the whole archive of the implemented newspaper websites.
 The data there will be preprocessed by extracting only the human readable text and grouped.
 
 Since crawling the whole archive of the websites could produce a lot of data, a database is necessary to mange it.
@@ -35,10 +35,6 @@ The data format of each article is like shown below:
 ### Usage
 #### Installing dependencies
 Execute this command in the shell:
-###### For Python 2.x
-```
-pip install -r requirements.txt
-```
 ###### For Python 3.x
 ```
 pip3 install -r requirements.txt
